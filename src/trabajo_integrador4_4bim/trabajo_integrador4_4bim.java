@@ -24,7 +24,7 @@ public class trabajo_integrador4_4bim {
 			System.out.println("ingrese el nombre del jugador:" + (i + 1));
 			nombre[i] = datos.next();
 			System.out.println("ingrese el apellido del jugador:" + (i + 1));
-			apellido[i] = datos.next();
+			apellido[i] = datos.next(); 
 			
 			System.out.println("ingrese el numero de camiseta del jugador:" + (i + 1));
 			numero_camisa[i] = datos.nextInt();
@@ -166,6 +166,8 @@ public class trabajo_integrador4_4bim {
 		String ref;
 		int n_c;
 		String n_d;
+		int no_igual=0;
+		int no_igual2=0
   
 		do {
 		System.out.println("datos de los jugadores");
@@ -210,9 +212,7 @@ public class trabajo_integrador4_4bim {
 					apellido[l] = datos.next();				
 				}
 				if (n_c != numero_camisa[l]) {
-					System.out.println("ese valor no exite. vuelva a intenar");
-					coreccrts=false;
-					break;
+					no_igual=1
 				}
 				
 			}
@@ -229,7 +229,11 @@ public class trabajo_integrador4_4bim {
                    pasar=true;
 				  }
                if(n_c != n_suplente[1]) {
-            	   System.out.println("ese valor no existe.vuelve a intenar");
+            	  no_igual2=1;
+               }
+
+			    if(no_igual==1 && no_igual2==1) {
+            	   System.out.println("ese valor no existe");
             	   coreccrts=false;
                }
 			  
